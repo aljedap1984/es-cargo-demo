@@ -43,6 +43,6 @@ public class CargoService {
     }
 
     public List<Cargo> findAll() {
-        return cargoRepository.findAll();
+        return cargoRepository.findByStatus(CargoStatus.RECEIVED);
     }
 }
