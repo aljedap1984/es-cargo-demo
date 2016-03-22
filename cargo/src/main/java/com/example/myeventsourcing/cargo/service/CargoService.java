@@ -43,7 +43,6 @@ public class CargoService {
     }
 
     public List<Cargo> findAll() {
-        //test commit git
         return cargoRepository.findByStatus(CargoStatus.RECEIVED);
     }
 }
