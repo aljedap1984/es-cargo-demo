@@ -29,6 +29,12 @@ public class CargoService {
         cargo.setStatus(CargoStatus.CREATED);
         cargo = cargoRepository.saveAndFlush(cargo);
 
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         CargoCreatedEvent createdEvent = new CargoCreatedEvent(cargo.getCustomerId(), cargo.getAmount());
         createdEvent.setEntityId(cargo.getId() + "");
         createdEvent.setTxId(cargo.getId()+"");
