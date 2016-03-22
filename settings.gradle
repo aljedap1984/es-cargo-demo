@@ -1,0 +1,13 @@
+include 'helloworld'
+include 'event-sourcing'
+include 'common-swagger'
+include 'common-source'
+include 'common-web'
+include 'common-websocket'
+include 'api-gateway-service'
+include 'cargo'
+include 'customer'
+include 'financial'
+
+rootProject.name = 'es-cargo-demo'
+
